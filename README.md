@@ -2,6 +2,13 @@
 
 This builds a SpongeVanilla container
 
+Sample scripts for creating the containers are in the Github repo:
+
+create.data_container = Creates the Docker data only container
+create.spongevanilla = Creates the SpongeVanilla container using the data only container.
+create.spongevanilla-nodata = Creates the SpongeVanilla container with all data stored locally inside the container.  ** Be Careful, You Could Loose Your World **
+
+
 #### Pull the image
 ```
 docker pull tighek/minecraft-spongevanilla
