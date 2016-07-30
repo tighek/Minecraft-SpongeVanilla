@@ -1,0 +1,9 @@
+#!/bin/sh
+
+docker run -d --name spongevanilla \
+  --volumes-from minecraft_data \
+  --restart=always \
+  -p 25565:25565 \
+  -p 25565:25565/udp \
+  tighek/spongevanilla:latest
+

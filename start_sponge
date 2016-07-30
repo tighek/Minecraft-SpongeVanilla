@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cp /srv/eula.txt /srv/minecraft/
+java -Xmx1024M -Xms1024M -jar /srv/spongevanilla.jar
+

@@ -2,17 +2,38 @@
 
 This builds a SpongeVanilla container
 
-##### Pull the image
+#### Pull the image
 ```
-docker pull tighek/Minecraft-SpongeVanilla
+docker pull tighek/spongevanilla
 ```
+
+#### Quick test without preserving your worlds
 
 ##### Create a container and publish the required tcp/udp ports
 ```
-docker run -d --name sponge -p 25565:25565 -p 25565:25565/udp -t tighek/Minecraft-SpongeVanilla
+docker run -d --name sponge -p 25565:25565 -p 25565:25565/udp -t tighek/spongevanilla
 ```
 
-##### Migrate data from another container or backup your world by starting a Linux container 
+#### Running with your world data in a data only contrainer
+
+##### Create the data only container
+```
+docker create -v /srv/minecraft/custom --name minecraft_data busybox:latest /bin/true
+```
+
+##### Create the SpongeVanilla container
+```
+docker run -d --name spongevanilla --volumes-from minecraft_data --restart=always -p 25565:25565 -p 25565:25565/udp tighek/spongevanilla:latest
+```
+
+#### Running with your world data in a local directory
+
+##### Create the SpongeVanilla container
+```
+docker run -d --name spongevanilla --volume /local_directory:/srv/minecraft/custom --restart=always -p 25565:25565 -p 25565:25565/udp tighek/spongevanilla:latest
+```
+
+#### Migrate data from another container or backup your world by starting a Linux container 
 attached to your sponge container.
 ```
 docker run --name sponge_attach --volumes-from sponge -v /mountpoint:/mountpoint -i -t ubuntu /bin/bash
