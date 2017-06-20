@@ -1,0 +1,1 @@
+docker create -v /srv/minecraft/custom --name minecraft_data centos:7 /bin/true
