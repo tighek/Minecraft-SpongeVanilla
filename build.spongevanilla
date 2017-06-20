@@ -2,8 +2,8 @@
 
 # Create Sponge Vanilla from Dockerfile
 
-docker build -t tighek/minecraft_spongevanilla:6.1.0 .
+docker build -t tighek/minecraft_spongevanilla:1.11.2-6.1.0-BETA-11 .
 docker rmi tighek/minecraft_spongevanilla:latest
-docker tag tighek/minecraft_spongevanilla:6.1.0 tighek/minecraft_spongevanilla:latest
+docker tag tighek/minecraft_spongevanilla:1.11.2-6.1.0-BETA-11 tighek/minecraft_spongevanilla:latest
 
 

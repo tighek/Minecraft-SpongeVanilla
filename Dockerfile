@@ -13,9 +13,9 @@ RUN cp /srv/eula.txt /srv/minecraft/
 ADD ./start_sponge /srv/
 RUN chmod 775 /srv/start_sponge
 
-ADD https://repo.spongepowered.org/maven/org/spongepowered/spongevanilla/1.10.2-5.0.0-BETA-93/spongevanilla-1.10.2-5.0.0-BETA-93.jar /srv/
+ADD https://repo.spongepowered.org/maven/org/spongepowered/spongevanilla/1.11.2-6.1.0-BETA-11/spongevanilla-1.11.2-6.1.0-BETA-11.jar /srv/
 
-RUN ln -s /srv/spongevanilla-1.10.2-5.0.0-BETA-93.jar /srv/spongevanilla.jar
+RUN ln -s /srv/spongevanilla-1.11.2-6.1.0-BETA-11.jar /srv/spongevanilla.jar
 
 WORKDIR /srv/minecraft
 VOLUME ["/srv/minecraft"]
