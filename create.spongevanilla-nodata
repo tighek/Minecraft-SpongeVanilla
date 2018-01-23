@@ -4,5 +4,5 @@ docker run -d --name spongevanilla \
   --restart=always \
   -p 25565:25565 \
   -p 25565:25565/udp \
-  tighek/minecraft-spongevanilla:latest
+  tighek/minecraft-spongevanilla
 

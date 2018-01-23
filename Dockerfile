@@ -5,7 +5,6 @@
 FROM java:8
 MAINTAINER Tighe Kuykendall, http://github.com/TigheK
 
-RUN mkdir /srv
 RUN mkdir /srv/minecraft
 
 ADD ./eula.txt /srv/

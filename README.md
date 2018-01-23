@@ -1,11 +1,10 @@
 # SpongeVanilla
 
-This builds a SpongeVanilla container
+SpongeVanilla container
 
 Sample scripts for creating the containers are in the Github repo:
 
-create.data_container = Creates the Docker data only container
-create.spongevanilla = Creates the SpongeVanilla container using the data only container.
+create.spongevanilla = Creates the SpongeVanilla container storing data at /srv/minecraft.
 create.spongevanilla-nodata = Creates the SpongeVanilla container with all data stored locally inside the container.  ** Be Careful, You Could Loose Your World **
 
 
@@ -18,7 +17,7 @@ docker pull tighek/minecraft-spongevanilla
 
 ##### Create a container and publish the required tcp/udp ports
 ```
-docker run -d --name sponge -p 25565:25565 -p 25565:25565/udp -t tighek/minecraft-spongevanilla
+docker run -d --name spongevanilla -p 25565:25565 -p 25565:25565/udp -t tighek/minecraft-spongevanilla
 ```
 
 #### Running with your world data in a data only contrainer

@@ -1,9 +1,10 @@
 #!/bin/sh
 
 docker run -d --name spongevanilla \
-  --volumes-from minecraft_data \
+  -v /srv/minecraft:/srv/minecraft \
   --restart=always \
+  --log-opt max-size=100m \
   -p 25565:25565 \
   -p 25565:25565/udp \
-  tighek/minecraft-spongevanilla:latest
+  tighek/minecraft-spongevanilla
 
