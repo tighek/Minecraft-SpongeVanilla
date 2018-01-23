@@ -1,5 +1,7 @@
 #!/bin/sh
 
 cp /srv/eula.txt /srv/minecraft/
-java -Xmx1024M -Xms1024M -jar /srv/spongevanilla.jar
+cp /srv/s* /srv/minecraft/
+
+java -Xmx1024M -Xms1024M -jar /srv/minecraft/spongevanilla.jar
 
