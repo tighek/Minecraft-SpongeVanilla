@@ -18,8 +18,6 @@ RUN ln -s /srv/spongevanilla.jar /srv/minecraft/spongevanilla.jar
 
 RUN touch /srv/spongevanilla_1.12.2-7.1.0-BETA-11
 
-RUN chown -R minecraft:miencraft /srv
-
 WORKDIR /srv/minecraft
 VOLUME ["/srv/minecraft"]
 
