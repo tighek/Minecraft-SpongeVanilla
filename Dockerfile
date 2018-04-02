@@ -14,10 +14,10 @@ ADD ./start_sponge /srv/
 RUN chmod 775 /srv/start_sponge
 RUN cp /srv/start_sponge /srv/minecraft/
 
-ADD https://repo.spongepowered.org/maven/org/spongepowered/spongevanilla/1.12.2-7.1.0-BETA-24/spongevanilla-1.12.2-7.1.0-BETA-24.jar /srv/spongevanilla.jar
+ADD https://repo.spongepowered.org/maven/org/spongepowered/spongevanilla/1.12.2-7.1.0-BETA-33/spongevanilla-1.12.2-7.1.0-BETA-33.jar /srv/spongevanilla.jar
 RUN ln -s /srv/spongevanilla.jar /srv/minecraft/spongevanilla.jar
 
-RUN touch /srv/spongevanilla_1.12.2-7.1.0-BETA-24
+RUN touch /srv/spongevanilla_1.12.2-7.1.0-BETA-33
 
 WORKDIR /srv/minecraft
 VOLUME ["/srv/minecraft"]
